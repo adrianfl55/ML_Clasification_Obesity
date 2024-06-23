@@ -66,7 +66,7 @@ IQR = Q3 - Q1
 personas_por_clase = countmap(datos[:, end])
 
 ############################################################## PREPROCESADO DE LOS DATOS ################################################################################
-# Procesamos los datos -> Nuestro targets es Obesidad
+# Procesamos los datos -> Nuestro target es Obesidad
 # Columnas categóricas numéricas 7, 8, 11, 13, 14
 categorica7 = Int.(oneHotEncoding(inputs[:, 7]))
 categorica8 = Int.(oneHotEncoding(inputs[:, 8]))
