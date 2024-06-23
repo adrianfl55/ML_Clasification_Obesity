@@ -518,20 +518,3 @@ println("RR.NN.AA")
 mejor_precision_rna, _, mejor_especificidad_rna, _, _, _ = modelCrossValidationModificada(:ANN, hiperparametros_rna[mejor_indice_rna], inputsFinal, targets, crossValidationIndices)
 
 boxplot(["SVM", "DTC", "KNN"], [mejor_especificidad_svm, mejor_especificidad_dtc, mejor_especificidad_knn], title = "Especificidad del mejor modelo de los 4 algoritmos", xlabel = "Algoritmo", ylabel = "Especificidad")
-
-
-# Seleccionamos el mejor algoritmo de los 4
-#=
-function seleccionar_mejoralgoritmo(precisiones, especificidades, indices, orden, umbral_precision, umbral_especificidad)
-    puntuaciones = [umbral_precision * precision + umbral_especificidad * especificidad for (precision, especificidad) in zip(precisiones, especificidades)]
-    indice_mejor_algoritmo = argmax(maximum(puntuaciones))
-    return orden[indice_mejor_algoritmo], indices[indice_mejor_algoritmo]
-end
-
-mejores_precisiones = [precision_rna[mejor_indice_rna], precisiones_svm[mejor_indice_svm], precisiones_dtc[mejor_indice_dtc], precisiones_knn[mejor_indice_knn]]
-mejores_indices_modelo = [mejor_indice_rna, mejor_indice_svm, mejor_indice_dtc, mejor_indice_knn]
-orden = ["SVM", "DTC", "KNN", "RNA"]
-umbral_precision = umbral_especificidad = 0.5
-
-seleccionar_mejoralgoritmo(mejores_precisiones, mejores_especificidades, mejores_indices_modelo, orden, umbral_precision, umbral_especificidad)
-=#
