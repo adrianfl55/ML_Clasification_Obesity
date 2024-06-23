@@ -9,7 +9,7 @@ using MLBase
 using JLD2
 
 # Incluimos el archivo firmas.jl para usar las funciones previas
-include("firmas_soluciones.jl")
+include("firmas_def.jl")
 
 # Leemos el archivo CSV y lo convertimos en un DataFrame
 datos = CSV.read("ObesityDataSet_raw_and_data_sinthetic.csv", DataFrame)
