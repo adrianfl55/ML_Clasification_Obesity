@@ -9,7 +9,7 @@ This is a Machine Learning project focused on classifying different degrees of o
   - K-Nearest Neighbors (KNN)
   - Decision Tree Classifier (DTC)
   - Support Vector Machine (SVM)
-  - Recurrent Neural Networks (RNN)
+  - Artificial Neural Networks (ANN)
 - **Model Evaluation**:
   - Cross-validation to assess model performance.
   - Different metrics such as accuracy, precision, recall, and F1-score.
