@@ -21,7 +21,7 @@ This is a Machine Learning project focused on classifying different degrees of o
 ## Usage
 1. Clone this repository:
    ```bash
-      git clone https://github.com/adrianfl55/ML_Clasificacion_Obesidad
+   git clone https://github.com/adrianfl55/ML_Clasificacion_Obesidad
 2. Move into your directory:
    ```bash
-      cd your-directory
+   cd your-directory
